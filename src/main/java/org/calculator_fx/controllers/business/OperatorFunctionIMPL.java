@@ -1,16 +1,13 @@
-package org.calculator_fx.controllers;
+package org.calculator_fx.controllers.business;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.calculator_fx.controllers.requestresponse.GetRequestResponse;
+import org.calculator_fx.model.manager.DataManager;
 
-public class Operator_Functions{
-    private static Operator_Functions instance = new Operator_Functions();
-    private Operator_Functions(){}
-    public static Operator_Functions getInstance(){
-        return instance;
-    }
+public class OperatorFunctionIMPL implements OperatorFunction{
 
     private double num1;
     private double num2;
@@ -106,6 +103,12 @@ public class Operator_Functions{
             double value = Math.tan(getNum1());
             textField.setText(String.valueOf(value));
         }
+    }
+
+    @Override
+    public void getSaveToFile(ActionEvent actionEvent, Button button, TextArea textArea) {
+        GetRequestResponse getRequestResponse = new GetRequestResponse();
+        getRequestResponse.setSaveToFileIMPL(actionEvent, button, textArea);
     }
 
     private double getNum1() {

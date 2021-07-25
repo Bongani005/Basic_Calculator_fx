@@ -1,4 +1,4 @@
-package org.calculator_fx.controllers;
+package org.calculator_fx.controllers.business;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -6,12 +6,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class Pad_Number_Functions{
-    private static Pad_Number_Functions instance = new Pad_Number_Functions();
-    private Pad_Number_Functions(){}
-    public static Pad_Number_Functions getInstance(){
-        return instance;
-    }
+public class StaticPadFunctionIMPL implements StaticPadFunction{
 
     public void padFunction(ActionEvent actionEvent, Button button, TextField field, String name) {
         if(actionEvent.getSource() == button){
