@@ -6,16 +6,16 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import org.calculator_fx.controllers.business.OperatorFunction;
+import org.calculator_fx.controllers.business.OperatorFunctionIMPL;
 import org.calculator_fx.controllers.business.StaticPadFunction;
-
-import javax.inject.Inject;
+import org.calculator_fx.controllers.business.StaticPadFunctionIMPL;
 
 public class StaticPaFunctionServicesIMPL implements StaticPaFunctionServices{
-    @Inject
-    private StaticPadFunction staticPadFunction;
 
-    @Inject
-    private OperatorFunction operatorFunction;
+    private StaticPadFunction staticPadFunction = new StaticPadFunctionIMPL();
+
+
+    private OperatorFunction operatorFunction = new OperatorFunctionIMPL();
 
     @Override
     public void padFunction(ActionEvent actionEvent, Button button, TextField field, String name) {

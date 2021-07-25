@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import org.calculator_fx.controllers.requestresponse.GetRequestResponse;
 
 public interface OperatorFunction {
     void addPlus(ActionEvent actionEvent, Button button, TextField textField);

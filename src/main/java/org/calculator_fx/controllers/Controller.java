@@ -6,9 +6,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import org.calculator_fx.controllers.services.StaticPaFunctionServices;
-import org.calculator_fx.model.dao.SaveToFileIMPL;
-
-import javax.inject.Inject;
+import org.calculator_fx.controllers.services.StaticPaFunctionServicesIMPL;
 
 public class Controller {
     public TextField textField;
@@ -41,8 +39,8 @@ public class Controller {
     public Button clear_tex_area;
     public Button save_history;
 
-    @Inject
-    private StaticPaFunctionServices services;
+
+    private StaticPaFunctionServices services = new StaticPaFunctionServicesIMPL();
 
 
     public void padNumberFunction(ActionEvent actionEvent) {

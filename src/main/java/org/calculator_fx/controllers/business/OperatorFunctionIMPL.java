@@ -5,7 +5,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import org.calculator_fx.controllers.requestresponse.GetRequestResponse;
-import org.calculator_fx.model.manager.DataManager;
 
 public class OperatorFunctionIMPL implements OperatorFunction{
 
